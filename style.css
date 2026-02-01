@@ -1,0 +1,72 @@
+* { 
+    font-family: 'Noto Sans Lao', sans-serif; 
+    -webkit-tap-highlight-color: transparent; 
+    box-sizing: border-box; 
+}
+
+body { 
+    touch-action: manipulation; 
+    height: 100dvh; 
+    overflow: hidden; 
+}
+
+.hide-s::-webkit-scrollbar { 
+    display: none; 
+}
+
+.receipt-container { 
+    width: 380px; 
+    background: white; 
+    padding: 20px; 
+    position: relative; 
+    overflow: hidden; 
+    color: #000; 
+}
+
+.wm-layer { 
+    position: absolute; 
+    inset: -50%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    transform: rotate(-30deg); 
+    pointer-events: none; 
+    z-index: 0; 
+    opacity: 0.05; 
+    align-content: center; 
+    justify-content: center; 
+    gap: 40px; 
+}
+
+.wm-text { 
+    font-size: 14px; 
+    font-weight: bold; 
+    white-space: nowrap; 
+}
+
+@media print { 
+    .no-p { display: none !important; } 
+}
+
+.btn-active:active { 
+    transform: scale(0.96); 
+    transition: 0.1s; 
+}
+
+.modal-bg { 
+    background: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(4px); 
+}
+
+.product-card { 
+    transition: all 0.2s; 
+    border: 1px solid #f1f5f9; 
+}
+
+.product-card:active { 
+    transform: scale(0.95); 
+}
+
+#login-screen { 
+    z-index: 9999; 
+    background: linear-gradient(135deg, #4338ca 0%, #1e1b4b 100%); 
+}
